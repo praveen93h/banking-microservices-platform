@@ -163,7 +163,7 @@ Event-driven notification system:
 | GET | `/api/notifications/user/{userId}` | Get user notifications |
 | GET | `/api/notifications/pending` | Get pending notifications |
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 - Docker & Docker Compose
@@ -174,7 +174,7 @@ Event-driven notification system:
 
 1. **Clone the repository:**
    ```bash
-   git clone <repository-url>
+   git clone [<repository-url>](https://github.com/praveen93h/banking-microservices-platform.git)
    cd banking_microservices
    ```
 
@@ -229,7 +229,7 @@ Event-driven notification system:
    ./mvnw spring-boot:run
    ```
 
-## 📋 Kafka Topics
+##  Kafka Topics
 
 | Topic | Publisher | Subscriber | Description |
 |-------|-----------|------------|-------------|
@@ -239,7 +239,7 @@ Event-driven notification system:
 | `transaction-completed` | Transaction Service | Notification Service | Successful transactions |
 | `transaction-failed` | Transaction Service | Notification Service | Failed transactions |
 
-## 🔐 Authentication
+##  Authentication
 
 The application uses JWT-based authentication:
 
@@ -273,7 +273,7 @@ The application uses JWT-based authentication:
      -H "Authorization: Bearer <your-jwt-token>"
    ```
 
-## 🔄 Saga Pattern Implementation
+##  Saga Pattern Implementation
 
 The Transaction Service implements the Saga pattern for distributed transactions:
 
@@ -290,7 +290,7 @@ If any step fails, the saga automatically compensates:
 - Credit step fails → Refund the debited amount to source account
 - Full audit trail maintained in transaction steps
 
-## 🛡️ Circuit Breaker
+##  Circuit Breaker
 
 Resilience4j circuit breaker is configured for inter-service communication:
 
@@ -305,7 +305,7 @@ resilience4j:
         waitDurationInOpenState: 10s
 ```
 
-## 📊 Monitoring
+##  Monitoring
 
 ### Zipkin Tracing
 Access Zipkin UI at http://localhost:9411 to trace requests across services.
@@ -319,7 +319,7 @@ Each service exposes health endpoints:
 curl http://localhost:8081/actuator/health
 ```
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 banking_microservices/
@@ -384,7 +384,7 @@ cd user-service
 ./mvnw verify
 ```
 
-## 🚧 Future Enhancements
+##  Future Enhancements
 
 - [ ] Rate limiting in API Gateway
 - [ ] SMS notification integration
@@ -408,3 +408,4 @@ This project is for educational purposes.
 3. Commit your changes
 4. Push to the branch
 5. Create a Pull Request
+
